@@ -1008,3 +1008,24 @@ section {
 .hidden {
     display: none !important;
 }
+
+@media (max-width: 768px) {
+    
+    .project-card:hover {
+        transform: none !important; 
+        box-shadow: none !important; 
+        border-color: rgba(168, 85, 247, 0.2); 
+    }
+
+   
+    .project-overlay {
+        opacity: 0 !important; 
+        pointer-events: none; 
+    }
+
+    
+    .project-link {
+        transform: scale(0) !important;
+        pointer-events: none; 
+    }
+}
