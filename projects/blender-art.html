@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>3D Art & Renders | Büşra Eryılmaz</title>
+
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <canvas id="cursorCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html"><span class="logo-text">BE</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home" class="nav-link">Home</a></li>
+            <li><a href="../index.html#about" class="nav-link">About</a></li>
+            <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+            <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+            <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- BU SAYFAYA ÖZEL: project-detail--3d -->
+    <main class="project-detail project-detail--3d">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <header class="project-header">
+                <div class="project-category">
+                    <span class="category-tag">3D Art & Animation</span>
+                </div>
+                <h1 class="project-title">3D Art & Renders</h1>
+                <p class="project-subtitle">
+                    Collection of 3D models, renders, and animations created with Blender
+                </p>
+                
+                <div class="project-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Personal Projects</span>
+                    </div>
+                </div>
+            </header>
+
+            
+            <section class="project-content">
+                <div class="content-grid">
+                    <div class="content-main">
+
+                        
+                        <div class="content-section">
+                            <h2><i class="fas fa-images"></i> Gallery</h2>
+
+                            <!--  SLIDER -->
+                            <div class="hero-media hero-slider" data-current="0">
+                                <button class="hero-slider-btn prev" aria-label="Previous video">&#10094;</button>
+
+                                <div class="hero-slider-track">
+                                    <!-- 1. video -->
+                                    <video class="hero-video-3d hero-slide is-active" controls playsinline data-index="0">
+                                        <source src="../assets/videos/renderbcafe.mp4" type="video/mp4">
+                                    </video>
+
+                                    <!-- 
+                                    <video class="hero-video-3d hero-slide" controls playsinline data-index="1">
+                                        <source src="../assets/videos/renderbcafe.mp4" type="video/mp4">
+                                    </video>
+
+                                     YENİ VİDEO EKLEMEK İÇİN ÖRNEK -->
+                                    <!--
+                                    <video class="hero-video-3d hero-slide" controls playsinline data-index="2">
+                                        <source src="../assets/videos/another-video.mp4" type="video/mp4">
+                                    </video>
+                                    -->
+                                </div>
+
+                                <button class="hero-slider-btn next" aria-label="Next video">&#10095;</button>
+                            </div>
+
+                            <!-- ENVIRONMENT CATEGORY -->
+                            <h3 class="gallery-subtitle">
+                                <i class="fas fa-mountain"></i> Environment
+                            </h3>
+
+                            <div class="gallery-grid gallery-large gallery-grid-3d">
+                                
+                                <div class="gallery-item">
+                                    <img src="../assets/images/BCAFE11.png" alt="Low Poly Cafe Render 4">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../assets/images/BCAFE5.png" alt="Low Poly Cafe Render 1">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../assets/images/BCAFE10.png" alt="Low Poly Cafe Render 3">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../assets/images/BCAFE6.png" alt="Low Poly Cafe Render 2">
+                                </div>
+
+                                
+                                <div class="gallery-item">
+                                    <img src="../assets/images/FENER1.png" alt="Low Poly Lighthouse Render 1">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../assets/images/FENER2.png" alt="Low Poly Lighthouse Render 2">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../assets/images/FENER3.png" alt="Low Poly Lighthouse Render 3">
+                                </div>
+                            </div>
+
+                           <!-- PROPS CATEGORY -->
+                            <h3 class="gallery-subtitle">
+                                <i class="fas fa-cube"></i> Props
+                            </h3>
+
+                            <div class="gallery-grid gallery-large gallery-grid-3d">
+                                <div class="gallery-item">
+                                    <div class="placeholder-gallery">
+                                        <i class="fas fa-box-open"></i>
+                                        <p>Coming Soon</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="content-section">
+                            <h2><i class="fas fa-graduation-cap"></i> Skills</h2>
+                            <ul class="skills-list">
+                                <li>3D Modeling</li>
+                                <li>Texturing</li>
+                                <li>Lighting</li>
+                                <li>Animation</li>
+                                <li>Rendering</li>
+                            </ul>
+                        </div>
+
+                      
+                        <div class="content-section">
+                            <h2><i class="fas fa-star"></i> Techniques Used</h2>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i><span>3D Modeling & Sculpting</span></li>
+                                <li><i class="fas fa-check"></i><span>UV Unwrapping & Texturing</span></li>
+                                <li><i class="fas fa-check"></i><span>Lighting & Rendering (Cycles/Eevee)</span></li>
+                                <li><i class="fas fa-check"></i><span>Animation & Rigging</span></li>
+                                <li><i class="fas fa-check"></i><span>Compositing & Post-processing</span></li>
+                            </ul>
+                        </div>
+
+                        
+                        <div class="content-section">
+                            <h2><i class="fas fa-tools"></i> Software & Tools</h2>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Blender</span>
+                                <span class="tech-tag">Cycles</span>
+                                <span class="tech-tag">Eevee</span>
+                                <span class="tech-tag">Substance Painter</span>
+                            </div>
+                        </div>
+
+                    </div> 
+                </div> 
+            </section> 
+
+            
+            <section class="project-navigation">
+                <a href="todoos.html" class="nav-project prev">
+                    <span class="nav-label">Previous Project</span>
+                    <span class="nav-title"><i class="fas fa-arrow-left"></i> ToDoos</span>
+                </a>
+                <a href="n8n-automation.html" class="nav-project next">
+                    <span class="nav-label">Next Project</span>
+                    <span class="nav-title">n8n AI Automation <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </section>
+        </div> 
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">&copy; 2025 Büşra Eryılmaz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

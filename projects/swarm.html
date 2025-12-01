@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>SWARM – Survival Game | Büşra Eryılmaz</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <canvas id="cursorCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html">
+                <span class="logo-text">BE</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home" class="nav-link">Home</a></li>
+            <li><a href="../index.html#about" class="nav-link">About</a></li>
+            <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+            <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+            <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <main class="project-detail project-detail--swarm">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Projects
+            </a>
+
+            <header class="project-header">
+    <div class="project-category">
+        <span class="category-tag">Game Development</span>
+    </div>
+    <h1 class="project-title">SWARM – Survival Game</h1>
+    <p class="project-subtitle">A fast-paced, Unity-based top-down survival shooter with intense gameplay mechanics.</p>
+
+    <div class="project-cta">
+    <a href="https://drive.google.com/file/d/1o3UluuWb9eakJGhNKs4dsRS3uKwjbMnX/view?usp=sharing"
+       class="btn btn-primary"
+       target="_blank">
+        <i class="fas fa-download"></i> Play Demo
+    </a>
+</div>
+
+</header>
+
+
+       <section class="project-hero">
+    <div class="hero-media">
+
+        <span class="hero-badge">INTRO</span>
+
+        <video class="hero-video" controls>
+            <source src="../assets/videos/swarm.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+</section>
+
+
+
+            <section class="project-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                            <p>
+                                This project originally started as a university team assignment, but after the course ended I took full ownership and rebuilt the entire game on my own from the ground up.
+                            <p>
+                                 Using Unity and C#, I added new characters, new maps, redesigned core systems, implemented new gameplay mechanics, and completely overhauled the UI/UX. I refactored the architecture, fixed existing issues, and improved stability, balance, and overall gameplay. I independently handled the full development cycle—from design and coding to testing and polishing.
+                            </p>
+                        </div>
+
+                    <div class="content-section">
+    <h2><i class="fas fa-star"></i> Key Features</h2>
+    <ul class="feature-list">
+
+        <li>
+            <i class="fas fa-check"></i>
+            <span>Centralized Bootstrap scene managing audio, language, and global systems</span>
+        </li>
+
+        <li>
+            <i class="fas fa-check"></i>
+            <span>Fully functional pause system usable in every scene without breaking gameplay flow</span>
+        </li>
+
+        <li>
+            <i class="fas fa-check"></i>
+            <span>20 handcrafted maps designed with progressive difficulty balancing</span>
+        </li>
+
+        <li>
+            <i class="fas fa-check"></i>
+            <span>New enemy types, improved NPC behaviors, and optimized AI reactions</span>
+        </li>
+
+        <li>
+            <i class="fas fa-check"></i>
+            <span>Dynamic performance-based reward and economy system</span>
+        </li>
+
+    </ul>
+</div>
+
+
+
+                        <div class="content-section">
+    <h2><i class="fas fa-images"></i> Gallery</h2>
+    <div class="gallery-grid">
+
+        <div class="gallery-grid">
+
+    <div class="gallery-item">
+        <img src="../assets/gifs/6.gif" alt="Agent Selection GIF">
+        <div class="gallery-caption">Choose your agent!</div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="../assets/gifs/1.gif" alt="Dash GIF">
+        <div class="gallery-caption">Dash to escape enemies with Shift!</div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="../assets/gifs/2.gif" alt="Enemy Waves GIF">
+        <div class="gallery-caption">Face new and tougher enemies at every level!</div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="../assets/gifs/3.gif" alt="Break Moment GIF">
+        <div class="gallery-caption">Take a breather!</div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="../assets/gifs/4.gif" alt="Resting GIF">
+        <div class="gallery-caption">Because escaping is never that easy.</div>
+    </div>
+
+    
+    <div class="gallery-item">
+        <img src="../assets/gifs/7.gif" alt="Settings Menu GIF">
+        <div class="gallery-caption">Make your own settings</div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="../assets/gifs/8.gif" alt="Market GIF">
+        <div class="gallery-caption">Use the market to gain strength</div>
+    </div>
+
+</div>
+
+
+    </div>
+</div>
+
+
+
+                    <aside class="content-sidebar">
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-tools"></i> Technologies Used</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Unity</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Game Design</span>
+                                <span class="tech-tag">Level Design</span>
+                                <span class="tech-tag">UI/UX</span>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-graduation-cap"></i> Skills Gained</h3>
+                            <ul class="skills-list">
+                                <li>Real-time system development</li>
+                                <li>Algorithm design</li>
+                                <li>User-centered software development</li>
+                                <li>Software lifecycle management</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card">
+    <h3><i class="fas fa-link"></i> Links</h3>
+    <div class="project-links">
+        <a href="https://github.com/busraerylmaaz/SWARM_ImprovedVersion" 
+           class="project-link-btn" 
+           target="_blank">
+            <i class="fab fa-github"></i>
+            View on GitHub
+        </a>
+    </div>
+</div>
+
+                    </aside>
+                </div>
+            </section>
+
+            <section class="project-navigation">
+                <a href="food-detection.html" class="nav-project next">
+                    <span class="nav-label">Next Project</span>
+                    <span class="nav-title">AI-Powered Food Detection <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">BE</span>
+                </div>
+                <p class="footer-text">Designed & Built by Büşra Eryılmaz</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/busraerylmaaz" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/busraerylmaaz/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:erylmzbsr@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Büşra Eryılmaz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/cursor.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

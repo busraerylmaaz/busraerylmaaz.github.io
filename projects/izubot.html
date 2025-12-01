@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>IZUBot – Semantic Search Chatbot | Büşra Eryılmaz</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <canvas id="cursorCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html"><span class="logo-text">BE</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home" class="nav-link">Home</a></li>
+            <li><a href="../index.html#about" class="nav-link">About</a></li>
+            <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+            <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+            <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <main class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <header class="project-header">
+                <div class="project-category">
+                    <span class="category-tag">AI & Machine Learning</span>
+                </div>
+                <h1 class="project-title">IZUBot – Semantic Search Chatbot</h1>
+                <p class="project-subtitle">Web-based semantic search chatbot</p>
+                
+                <div class="project-meta">
+                  
+                    <div class="meta-item"><i class="fas fa-users"></i><span>Team Project</span></div>
+                </div>
+            </header>
+<section class="project-hero">
+    <div class="hero-media">
+        <img src="../assets/images/bot1.png" 
+             alt="IZUBot Chatbot Interface" 
+             class="hero-image-izubot">
+    </div>
+</section>
+
+
+            <section class="project-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                            <p>IZUBot is a web-based semantic search question-answering chatbot developed for Istanbul Sabahattin Zaim University. It uses multilingual MiniLM sentence embeddings and FAISS indexes built separately for each faculty to match student questions with the most relevant FAQ entries. The backend is implemented with FastAPI and integrates with an LLM (Mistral via Ollama) to generate fluent, context-aware answers over a REST API.</p>
+                        </div>
+
+                        <div class="content-section">
+                            <h2><i class="fas fa-star"></i> Key Features</h2>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i><span>Faculty-specific semantic search using multilingual MiniLM embeddings and FAISS indexes.</span></li>
+                                <li><i class="fas fa-check"></i><span>End-to-end pipeline from Excel-based Q&amp;A data to vectorization, indexing, and persistent storage.</span></li>
+                                <li><i class="fas fa-check"></i><span>FastAPI backend with a dedicated <code>/ask</code> endpoint that loads .faiss and .pkl files at startup and routes queries to the LLM.</span></li>
+                                <li><i class="fas fa-check"></i><span>Structured JSON responses with answer text and timing information for easy integration with web and future mobile frontends.</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="content-section">
+                            <h2><i class="fas fa-images"></i> Gallery</h2>
+                            <div class="gallery-grid">
+                                 <img src="../assets/images/bot2.png" 
+                 alt="IZUBot Semantic Search UI" 
+                 class="gallery-photo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="content-sidebar">
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-tools"></i> Technologies Used</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">MiniLM sentence embeddings</span>
+                                <span class="tech-tag">FAISS vector search</span>
+                                <span class="tech-tag">FastAPI backend</span>
+                                <span class="tech-tag">Mistral · NLP</span>
+                                <span class="tech-tag">Python · Pandas</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-graduation-cap"></i> Skills Gained</h3>
+                            <ul class="skills-list">
+                                <li>Semantic search and NLP for Q&amp;A systems</li>
+                                <li>Designing faculty-specific information retrieval pipelines</li>
+                                <li>API development and LLM integration with FastAPI</li>
+                                <li>Data preparation, evaluation, and performance monitoring</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="project-navigation">
+                <a href="plant-recognition.html" class="nav-project prev">
+                    <span class="nav-label">Previous Project</span>
+                    <span class="nav-title"><i class="fas fa-arrow-left"></i> Plant Recognition</span>
+                </a>
+                <a href="todoos.html" class="nav-project next">
+                    <span class="nav-label">Next Project</span>
+                    <span class="nav-title">ToDoos <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">&copy; 2025 Büşra Eryılmaz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/cursor.js"></script>
+    <script src="../js/main.js"></script>
+   
+</body>
+</html>

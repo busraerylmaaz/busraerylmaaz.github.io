@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Büşra Eryılmaz</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <canvas id="cursorCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="logo-text">BE</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">BÜŞRA ERYILMAZ</h1>
+            <div class="hero-title-wrapper">
+                <span class="hero-title-static">I'm a </span>
+                <span class="hero-title-dynamic" id="typingText"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Creative Developer crafting AI systems, games, and 3D experiences.
+            </p>
+            <div class="hero-buttons">
+    <a href="#projects" class="btn btn-primary">View Projects</a>
+    <a href="https://drive.google.com/file/d/1DYVLlFbM3r7i-kx_TOo89cmxpg9PZ-gm/view?usp=sharing"
+       class="btn btn-secondary"
+       target="_blank">
+        <i class="fas fa-download"></i> Download CV
+    </a>
+</div>
+
+            <div class="hero-socials">
+                <a href="https://github.com/busraerylmaaz" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/busraerylmaaz/" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:erylmzbsr@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decoration">&#60;</span>
+                About Me
+                <span class="title-decoration">/&#62;</span>
+            </h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                         <img src="assets/me.jpg" alt="Büşra Eryılmaz" class="profile-photo">
+                    </div>
+                    <div class="image-decoration"></div>
+                </div>
+                <div class="about-text">
+                    <h3>Computer Engineer & Creative Developer</h3>
+                    <p>
+                        I work in artificial intelligence, machine learning, and computer vision, focusing on building practical models and end-to-end systems. I have hands-on experience with deep learning, YOLOv8, CNN-based image classifiers, NLP pipelines, semantic search (MiniLM + FAISS), and API development using FastAPI. My background includes dataset preparation, model training, backend integration, and deploying AI-driven applications that operate reliably with real data. </p>
+<p>In addition to my AI work, I also develop games with Unity and create 3D content using Blender. I redesign gameplay systems, build real-time interactions, and prototype mechanics from scratch. This gives me a strong sense of problem-solving, algorithm design, and interactive system development. </p>
+
+
+
+                    
+                    <p>
+                        I continuously improve in both areas and enjoy working on projects that require analytical thinking, hands-on development, and a fast learning approach.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <span class="info-label">Education</span>
+                                <span class="info-value">BSc Computer Engineering</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <span class="info-label">University</span>
+                                <span class="info-value">Istanbul Sabahattin Zaim University</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Istanbul, Turkey</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decoration">&#60;</span>
+                Skills & Technologies
+                <span class="title-decoration">/&#62;</span>
+            </h2>
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-hashtag"></i>
+                            </div>
+                            <span>C#</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-c"></i>
+                            </div>
+                            <span>C/C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <span>Dart</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <span>Deep Learning</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <span>NLP</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <span>YOLO</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <span>CNN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-gamepad"></i> Game Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fab fa-unity"></i>
+                            </div>
+                            <span>Unity</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <span>Blender</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <span>Game Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <span>3D Modeling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Frameworks</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-feather"></i>
+                            </div>
+                            <span>Flutter</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-sitemap"></i>
+                            </div>
+                            <span>n8n</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Software Engineering</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <span>OOP</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span>Data Structures</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-sort-amount-up"></i>
+                            </div>
+                            <span>Algorithms</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-puzzle-piece"></i>
+                            </div>
+                            <span>Design Patterns</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <span>SOLID</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <span>Agile/Scrum</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <span>Problem Solving</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon float-up">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <span>Team Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decoration">&#60;</span>
+                My Projects
+                <span class="title-decoration">/&#62;</span>
+            </h2>
+            
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="game">Game Development</button>
+                <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
+                <button class="filter-btn" data-filter="3d">3D Art & Animation</button>
+                <button class="filter-btn" data-filter="web">Web & Mobile Apps</button>
+            </div>
+
+            <div class="projects-grid">
+    <article class="project-card" data-category="game">
+        <div class="project-image">
+
+          
+            <img src="assets/gifs/5.gif" alt="SWARM Gameplay GIF">
+
+            <div class="project-overlay">
+                <a href="projects/swarm.html" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+
+                    <div class="project-info">
+                        <h3>SWARM – Survival Game</h3>
+                        <p>A survival game independently developed with Unity, featuring gameplay mechanics, level design, and UI.</p>
+                        <div class="project-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">Game Design</span>
+                        </div>
+                    </div>
+                </article>
+                  <article class="project-card" data-category="3d">
+                    <div class="project-image">
+                           
+        <img src="assets/images/BCAFE6.png" 
+             alt="3D Cafe Render" 
+             class="project-thumb">
+                        <div class="project-overlay">
+                            <a href="projects/blender-art.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>3D Art & Renders</h3>
+                        <p>Collection of 3D models, renders, and animations created with Blender.</p>
+                        <div class="project-tags">
+                            <span class="tag">Blender</span>
+                            <span class="tag">3D Art</span>
+                            <span class="tag">Animation</span>
+                        </div>
+                    </div>
+                </article> 
+                <article class="project-card" data-category="ai">
+                    <div class="project-image">
+                       <img src="assets/images/yemek1.png" alt="AI Food Detection Preview" class="project-thumb">
+                        <div class="project-overlay">
+                            <a href="projects/food-detection.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI-Powered Food Detection</h3>
+                        <p>Mobile app detecting cafeteria meals and estimating calories using YOLOv8 and Flutter.</p>
+                        <div class="project-tags">
+                            <span class="tag">YOLOv8</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">FastAPI</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="assets/images/bitki1.png" alt="Plant">
+                        <div class="project-overlay">
+                            <a href="projects/plant-recognition.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Plant Recognition Web App</h3>
+                        <p>CNN-based plant image classification with real-time web interface predictions.</p>
+                        <div class="project-tags">
+                            <span class="tag">CNN</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="ai">
+                    <div class="project-image">
+                         <img src="assets/images/bot1.png" alt="IZUBot Preview" class="project-thumb">
+                        <div class="project-overlay">
+                            <a href="projects/izubot.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>IZUBot – Semantic Search Chatbot</h3>
+                        <p>Transformer-based chatbot for campus Q&A with multilingual embeddings and vector search.</p>
+                        <div class="project-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">FAISS</span>
+                            <span class="tag">MiniLM</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                         <img src="assets/images/todo1.png" alt="ToDo App Preview" class="project-thumb">
+                        <div class="project-overlay">
+                            <a href="projects/todoos.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ToDoos – Task Management App</h3>
+                        <p>Flutter mobile application for daily task management with clean and intuitive interface.</p>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                    </div>
+                </article>
+
+               
+
+                <article class="project-card" data-category="ai">
+                    <div class="project-image">
+                         <img src="assets/images/n8n1.png" alt="n8n Workflow Automation" class="project-thumb">
+                        <div class="project-overlay">
+                            <a href="projects/n8n-automation.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>n8n AI Automation</h3>
+                        <p>AI workflow automation project created for AI competition.</p>
+                        <div class="project-tags">
+                            <span class="tag">n8n</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card add-project" data-category="all">
+                    <div class="add-project-content">
+                        <i class="fas fa-plus-circle"></i>
+                        <p>More projects coming soon...</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-decoration">&#60;</span>
+                Get In Touch
+                <span class="title-decoration">/&#62;</span>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    
+                    <div class="contact-details">
+                        <a href="mailto:erylmzbsr@gmail.com" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">erylmzbsr@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/busraerylmaaz" target="_blank" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/busraerylmaaz</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/busraerylmaaz/" target="_blank" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">linkedin.com/in/busraerylmaaz</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Istanbul, Turkey</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+    <div class="cta-card">
+        <i class="fas fa-file-pdf"></i>
+        <h4>Download My CV</h4>
+        <p>Get a detailed overview of my experience and skills</p>
+        <a href="https://drive.google.com/file/d/1DYVLlFbM3r7i-kx_TOo89cmxpg9PZ-gm/view?usp=sharing"
+           class="btn btn-primary"
+           target="_blank">
+            <i class="fas fa-download"></i> Download CV
+        </a>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">BE</span>
+                </div>
+                <p class="footer-text">Designed & Built by Büşra Eryılmaz</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/busraerylmaaz" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/busraerylmaaz/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:erylmzbsr@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Büşra Eryılmaz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

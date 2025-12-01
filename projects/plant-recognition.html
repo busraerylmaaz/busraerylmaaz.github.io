@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>Plant Recognition Web App | Büşra Eryılmaz</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <canvas id="cursorCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html"><span class="logo-text">BE</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home" class="nav-link">Home</a></li>
+            <li><a href="../index.html#about" class="nav-link">About</a></li>
+            <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+            <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+            <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <main class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <header class="project-header">
+                <div class="project-category">
+                    <span class="category-tag">AI & Machine Learning</span>
+                </div>
+                <h1 class="project-title">Plant Recognition Web App</h1>
+                <p class="project-subtitle">Web application for wild plant recognition using CNN, TensorFlow/Keras, and FastAPI</p>
+                
+                <div class="project-meta">
+                    <div class="meta-item"><i class="fas fa-users"></i><span>Team Project</span></div>
+                </div>
+            </header>
+
+           <section class="project-hero">
+    <div class="hero-media">
+        <img src="../assets/images/bitki1.png" 
+             alt="Plant Recognition Interface" 
+             class="plant-hero-img">
+    </div>
+</section>
+
+
+            <section class="project-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                            <p>
+                                This project is a web-based wild plant recognition system that allows users such as hikers and campers to upload photos of plants they encounter in nature and receive instant predictions about the species. A Convolutional Neural Network (CNN) was trained using TensorFlow/Keras on a Kaggle dataset containing around 16,500 images from 35 different wild edible plant classes, split into training, validation, and test sets. The goal is to provide an informative and accessible tool that helps users identify plants correctly instead of relying on guesswork.
+                            </p>
+                            <p>
+                                The trained CNN model was exposed through a FastAPI backend that loads the model, processes incoming images, and returns prediction results as JSON. On the frontend side, a lightweight interface built with HTML, CSS, and JavaScript lets users upload an image, sends it to the API, and displays the predicted plant name together with additional information. The system achieved solid accuracy on unseen images and demonstrates how deep learning models can be integrated into real-world web applications for computer vision tasks.
+                            </p>
+                        </div>
+
+                        <div class="content-section">
+                            <h2><i class="fas fa-star"></i> Key Features</h2>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i><span>CNN-based classification of 35 wild edible plant species</span></li>
+                                <li><i class="fas fa-check"></i><span>Real-time predictions from uploaded plant photos via web interface</span></li>
+                                <li><i class="fas fa-check"></i><span>TensorFlow/Keras model served through a FastAPI backend</span></li>
+                                <li><i class="fas fa-check"></i><span>Clean HTML/CSS/JavaScript UI for image upload and result display</span></li>
+                                <li><i class="fas fa-check"></i><span>Architecture designed for easy scaling and future deployment to cloud platforms</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="content-section">
+    <h2><i class="fas fa-images"></i> Gallery</h2>
+    <div class="gallery-grid">
+
+       <div class="gallery-item">
+    <img src="../assets/images/bitki2.png" alt="Bitki 2" class="gallery-photo">
+</div>
+
+
+
+
+    </div>
+</div>
+
+
+                    <aside class="content-sidebar">
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-tools"></i> Technologies Used</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">CNN</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow / Keras</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">HTML / CSS / JS</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-graduation-cap"></i> Skills Gained</h3>
+                            <ul class="skills-list">
+                                <li>Deep learning with CNNs (TensorFlow/Keras)</li>
+                                <li>Dataset preparation and experiment design</li>
+                                <li>Model serving with FastAPI</li>
+                                <li>Web integration of AI models</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="project-navigation">
+                <a href="food-detection.html" class="nav-project prev">
+                    <span class="nav-label">Previous Project</span>
+                    <span class="nav-title"><i class="fas fa-arrow-left"></i> Food Detection</span>
+                </a>
+                <a href="izubot.html" class="nav-project next">
+                    <span class="nav-label">Next Project</span>
+                    <span class="nav-title">IZUBot <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">&copy; 2025 Büşra Eryılmaz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/cursor.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

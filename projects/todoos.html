@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>ToDoos – Task Management App | Büşra Eryılmaz</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <canvas id="cursorCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html"><span class="logo-text">BE</span></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home" class="nav-link">Home</a></li>
+            <li><a href="../index.html#about" class="nav-link">About</a></li>
+            <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+            <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+            <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <main class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <header class="project-header">
+                <div class="project-category">
+                    <span class="category-tag">Flutter Mobile App</span>
+                </div>
+                <h1 class="project-title">Todoos – Task Management App</h1>
+                <p class="project-subtitle">Flutter-based task management application with Firebase integration</p>
+                
+                <div class="project-meta">
+                  
+                    <div class="meta-item"><i class="fas fa-user"></i><span>Independent Project</span></div>
+                </div>
+            </header>
+
+            <section class="project-hero">
+    <div class="hero-media">
+        <img src="../assets/images/todo1.png" alt="ToDoos Hero Image" class="hero-image">
+    </div>
+</section>
+
+
+            <section class="project-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                            <p>Todoos is a task management application that allows users to manage their tasks easily. With Todoos, users can add, edit, complete and delete tasks, and organize them quickly through a clean and user-friendly interface. The application supports logging in with Google accounts or email, uses Firebase Authentication for secure access, and stores all task data in Firebase Firestore. Users can view their pending and completed tasks on separate pages, search within their tasks, and see their most recently added tasks first thanks to Firestore-based sorting.</p>
+                        </div>
+
+                        <div class="content-section">
+                            <h2><i class="fas fa-star"></i> Key Features</h2>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check"></i><span>Secure email sign-in using Firebase Authentication</span></li>
+                                <li><i class="fas fa-check"></i><span>Quick login with Google accounts</span></li>
+                                <li><i class="fas fa-check"></i><span>Separate pages for pending and completed tasks</span></li>
+                                <li><i class="fas fa-check"></i><span>Add new tasks to keep everything organized</span></li>
+                                <li><i class="fas fa-check"></i><span>Edit and update existing tasks at any time</span></li>
+                                <li><i class="fas fa-check"></i><span>Mark tasks as completed to track progress and motivation</span></li>
+                                <li><i class="fas fa-check"></i><span>Delete tasks that are no longer needed</span></li>
+                                <li><i class="fas fa-check"></i><span>Search through tasks to quickly find specific items</span></li>
+                                <li><i class="fas fa-check"></i><span>Tasks sorted from newest to oldest via Firestore</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="content-section">
+    <h2><i class="fas fa-images"></i> Gallery</h2>
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="../assets/images/todo2.png" alt="ToDoos Screenshot 1" class="gallery-image">
+          
+        </div>
+
+        <div class="gallery-item">
+            <img src="../assets/images/todo3.png" alt="ToDoos Screenshot 2" class="gallery-image">
+        </div>
+
+         <div class="gallery-item">
+            <img src="../assets/images/todo4.png" alt="ToDoos Screenshot 3" class="gallery-image">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../assets/images/todo5.png" alt="ToDoos Screenshot 4" class="gallery-image">
+        </div>
+
+          <div class="gallery-item">
+            <img src="../assets/images/todo6.png" alt="ToDoos Screenshot 5" class="gallery-image">
+        </div>
+
+    </div>
+</div>
+
+                    </div>
+
+                    <aside class="content-sidebar">
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-tools"></i> Technologies Used</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Dart</span>
+                                <span class="tech-tag">Firebase Authentication</span>
+                                <span class="tech-tag">Firebase Firestore</span>
+                                <span class="tech-tag">Visual Studio Code</span>
+                            </div>
+                        </div>
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-graduation-cap"></i> Skills Gained</h3>
+                            <ul class="skills-list">
+                                <li>Flutter &amp; Dart mobile development</li>
+                                <li>Firebase Authentication &amp; Firestore integration</li>
+                                <li>Implementing full CRUD operations for tasks</li>
+                                <li>Designing a user-friendly task management experience</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="project-navigation">
+                <a href="izubot.html" class="nav-project prev">
+                    <span class="nav-label">Previous Project</span>
+                    <span class="nav-title"><i class="fas fa-arrow-left"></i> IZUBot</span>
+                </a>
+                <a href="blender-art.html" class="nav-project next">
+                    <span class="nav-label">Next Project</span>
+                    <span class="nav-title">3D Art &amp; Renders <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">&copy; 2025 Büşra Eryılmaz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/cursor.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

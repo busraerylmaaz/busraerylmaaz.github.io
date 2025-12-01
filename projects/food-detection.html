@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <title>AI-Powered Cafeteria Food Detection | Büşra Eryılmaz</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <canvas id="cursorCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="../index.html">
+                <span class="logo-text">BE</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home" class="nav-link">Home</a></li>
+            <li><a href="../index.html#about" class="nav-link">About</a></li>
+            <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+            <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+            <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <main class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Projects
+            </a>
+
+            <header class="project-header">
+                <div class="project-category">
+                    <span class="category-tag">AI & Machine Learning</span>
+                </div>
+                <h1 class="project-title">AI-Based Cafeteria Food Recognition</h1>
+                <p class="project-subtitle">Mobile app that recognizes cafeteria tray meals from a photo and calculates total calories and cost using YOLOv8</p>
+                
+                <div class="project-meta">
+                  
+                    <div class="meta-item">
+                        <i class="fas fa-users"></i>
+                        <span>Team Project</span>
+                    </div>
+                    
+                </div>
+            </header>
+
+            <section class="project-hero">
+                <div class="hero-media">
+                    <img src="../assets/images/yemek2.png" alt="Home screen" class="hero-image hero-image--food">
+                </div>
+            </section>
+
+            <section class="project-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="content-section">
+                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                            <p>
+                               It is an AI-powered mobile application capable of recognizing multiple food items on a cafeteria tray from a single photo and automatically calculating the total calories and price.
+A suitable dataset was created for this task, and all images were thoroughly annotated using Roboflow. Each dish was linked to a JSON-based information structure containing its name, calorie value, and price. 
+                            </p>
+                            <p>
+                                The dataset was divided into 70% training, 20% validation, and 10% test splits. The trained YOLOv8 model was optimized to accurately detect the foods on a tray. The model was integrated into a REST API using Python and FastAPI, and the Flutter-based mobile application was designed to deliver real-time results through this API.
+                            </p>
+                        </div>
+
+                        <div class="content-section">
+                            <h2><i class="fas fa-star"></i> Key Features</h2>
+                            <ul class="feature-list">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Real-time tray and food detection using YOLOv8</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Automatic calorie calculation for each detected meal</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Total tray price calculation and menu-based discount / savings estimation</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>Flutter-based Android mobile application with a simple 3-page flow</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>FastAPI backend that processes uploaded images and returns JSON results</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="content-section">
+                            <h2><i class="fas fa-images"></i> Gallery</h2>
+                            <div class="gallery-grid gallery-grid-single">
+    <div class="gallery-item">
+        <img src="../assets/images/yemek1.png" alt="Home screen" class="gallery-image">
+    </div>
+</div>
+
+                        </div>
+
+                        <div class="content-section">
+                            <h2><i class="fas fa-lightbulb"></i> My Contribution</h2>
+                           
+                            <ul class="feature-list">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span> I contributed to the annotation of the entire dataset.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>I assisted in the training and development of the YOLOv8 model.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>I contributed to backend integration and API development using Python and FastAPI.</span>
+                                </li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+
+                    <aside class="content-sidebar">
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-tools"></i> Technologies Used</h3>
+                            <div class="tech-tags">
+                                <span class="tech-tag">YOLOv8</span>
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">Deep Learning</span>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h3><i class="fas fa-graduation-cap"></i> Skills Gained</h3>
+                            <ul class="skills-list">
+                                <li>Image processing & object detection</li>
+                                <li>Deep learning model training with YOLO</li>
+                                <li>Mobile–backend integration (Flutter &amp; FastAPI)</li>
+                                <li>End-to-end client–server system design</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card">
+    <h3><i class="fas fa-link"></i> Links</h3>
+    <div class="project-links">
+        <a href="https://github.com/busraerylmaaz/yemekhane-frontend" class="project-link-btn" target="_blank">
+            <i class="fab fa-github"></i>
+            Frontend Repository
+        </a>
+
+        <a href="https://github.com/busraerylmaaz/Yemekhane-backend" class="project-link-btn" target="_blank">
+            <i class="fab fa-github"></i>
+            Backend Repository
+        </a>
+    </div>
+</div>
+
+                    </aside>
+                </div>
+            </section>
+
+            <section class="project-navigation">
+                <a href="swarm.html" class="nav-project prev">
+                    <span class="nav-label">Previous Project</span>
+                    <span class="nav-title"><i class="fas fa-arrow-left"></i> SWARM – Survival Game</span>
+                </a>
+                <a href="plant-recognition.html" class="nav-project next">
+                    <span class="nav-label">Next Project</span>
+                    <span class="nav-title">Plant Recognition <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">BE</span>
+                </div>
+                <p class="footer-text">Designed &amp; Built by Büşra Eryılmaz</p>
+            </div>
+            <p class="copyright">&copy; 2025 Büşra Eryılmaz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/particles.js"></script>
+    <script src="../js/cursor.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
